@@ -8,9 +8,18 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features",
-        glue = "stepdefinitions",
-        tags = "@smoke",
-        dryRun = false
+        glue = {"stepdefinitions", "hooks"},
+        tags = "@AddRecord",
+        dryRun = false,
+        plugin = {
+                "html:target/reports/html-reports/cucumber.html",
+                "json:target/reports/json-reports/cucumber.json",
+                "junit:target/reports/xml-reports/cucumber.xml",
+                "pretty",
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" // For Spark report
+        }
+
 )
 public class Runner {
+
 }

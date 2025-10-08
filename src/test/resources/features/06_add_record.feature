@@ -12,4 +12,5 @@ Feature: Add Record
       | Hans  | 40 | Germany   |
     #Rest is homework
     #Then assert added records
-    Then close browser
+    Then assert added records
+    Then close the application browser
