@@ -7,9 +7,8 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/features",
+        features = "@target/failedScenarios.txt",
         glue = {"stepdefinitions", "hooks"},
-        tags = "@SODeleteChars",
         dryRun = false,
         plugin = {
                 "html:target/reports/html-reports/cucumber.html",
@@ -18,9 +17,8 @@ import org.junit.runner.RunWith;
                 "pretty",
                 "rerun:target/failedScenarios.txt",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" // For Spark report
-
         }
 
 )
-public class Runner {
+public class FailedRunner {
 }

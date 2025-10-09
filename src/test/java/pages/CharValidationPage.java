@@ -33,10 +33,12 @@ public class CharValidationPage {
 
     public void assertValidOutput() {
         assertEquals("Valid Value", validation_message.getAttribute("value"));
+        input.clear();
     }
 
     public void assertInvalidOutput() {
         assertEquals("Invalid Value", validation_message.getAttribute("value"));
+        input.clear();
     }
 
 
