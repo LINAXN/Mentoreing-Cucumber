@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = {"stepdefinitions", "hooks"},
-        tags = "@SODeleteChars",
+        tags = "@Registration",
         dryRun = false,
         plugin = {
                 "html:target/reports/html-reports/cucumber.html",
@@ -22,5 +22,4 @@ import org.junit.runner.RunWith;
         }
 
 )
-public class Runner {
-}
+public class Runner {}

@@ -17,4 +17,9 @@ public class CommonStepDefinitions {
     public void userVisits(String url) {
         Driver.getDriver().get(url);
     }
+
+    @Given("failed step")
+    public void failedStep() {
+        assert false;
+    }
 }
